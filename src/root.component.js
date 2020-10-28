@@ -19,7 +19,7 @@ export default function Root(props) {
       </svg>
 
       <div>
-        <Link to="/angular-example">Link to Angular child app</Link>
+        <Link to="/micro-frontends-angular-route">Link to Angular child app</Link>
       </div>
     </div>
   );
