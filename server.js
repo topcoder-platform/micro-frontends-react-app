@@ -4,7 +4,7 @@ const express = require("express");
 
 const app = express();
 
-app.use(
+app.use('/react',
   express.static("./dist", {
     setHeaders: function setHeaders(res) {
       res.header("Access-Control-Allow-Origin", "*");
@@ -16,6 +16,10 @@ app.use(
     },
   })
 );
+
+app.get('/', function (req, res) {
+  res.send('alive')
+})
 
 const PORT = process.env.PORT || 8500;
 app.listen(PORT);
