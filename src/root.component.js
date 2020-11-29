@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
-import { Link } from "@reach/router";
+import { Link, Router } from "@reach/router";
 import { setAppMenu } from "@topcoder/micro-frontends-navbar-app";
 import appMenu from "./constants/appMenu";
 import AuthDemo from "./components/AuthDemo";
+import NoSidebarDemo from "./components/NoSidebarDemo";
 
 export default function Root() {
   useEffect(() => {
@@ -32,7 +33,10 @@ export default function Root() {
         </Link>
       </div>
 
-      <AuthDemo />
+      <Router>
+        <AuthDemo path="/micro-frontends-react-route/auth" />
+        <NoSidebarDemo path="/micro-frontends-react-route/no-sidebar" />
+      </Router>
     </div>
   );
 }
