@@ -4,4 +4,6 @@ module.exports = {
   setAppMenu: () => {},
   getAuthUserTokens: () => new Promise(() => {}),
   getAuthUserProfile: () => new Promise(() => {}),
+  disableSidebarForRoute: () => {},
+  enableSidebarForRoute: () => {},
 };
