@@ -1,7 +1,16 @@
-import React from "react";
-import { Link } from "@reach/router";
+import React, { useEffect } from "react";
+import { Link, Router } from "@reach/router";
+import { setAppMenu } from "@topcoder/micro-frontends-navbar-app";
+import appMenu from "./constants/appMenu";
+import AuthDemo from "./components/AuthDemo";
+import NoSidebarDemo from "./components/NoSidebarDemo";
 
-export default function Root(props) {
+export default function Root() {
+  useEffect(() => {
+    // when app starts it should set its side menu structure
+    setAppMenu("/micro-frontends-react-route", appMenu);
+  }, []);
+
   return (
     <div style={{ textAlign: "center" }}>
       <h1>React child app example</h1>
@@ -19,8 +28,15 @@ export default function Root(props) {
       </svg>
 
       <div>
-        <Link to="/micro-frontends-angular-route">Link to Angular child app</Link>
+        <Link to="/micro-frontends-angular-route">
+          Link to Angular child app
+        </Link>
       </div>
+
+      <Router>
+        <AuthDemo path="/micro-frontends-react-route/auth" />
+        <NoSidebarDemo path="/micro-frontends-react-route/no-sidebar" />
+      </Router>
     </div>
   );
 }
