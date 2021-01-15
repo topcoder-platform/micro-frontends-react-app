@@ -2,6 +2,7 @@
 
 const webpackMerge = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa-react");
+const path = require('path')
 
 module.exports = (webpackConfigEnv) => {
   const defaultConfig = singleSpaDefaults({
@@ -18,6 +19,10 @@ module.exports = (webpackConfigEnv) => {
       "@topcoder/micro-frontends-navbar-app":
         "@topcoder/micro-frontends-navbar-app",
     },
+    output: {
+      path: path.resolve(__dirname, 'dist'),
+      publicPath: 'react',
+    },
     module: {
       rules: [
         {
@@ -29,5 +34,8 @@ module.exports = (webpackConfigEnv) => {
         },
       ],
     },
+    devServer: {
+      host: '0.0.0.0'
+    }
   });
 };
