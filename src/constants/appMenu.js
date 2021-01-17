@@ -25,6 +25,12 @@ const appMenu = [
     icon: homeIcon,
     activeIcon: homeActiveIcon,
   },
+  {
+    title: "View All Notifications",
+    path: "/notifications",
+    icon: homeIcon,
+    activeIcon: homeActiveIcon,
+  }
 ];
 
 export default appMenu;
