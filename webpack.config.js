@@ -16,8 +16,8 @@ module.exports = (webpackConfigEnv) => {
     // we have to list here all the microapps which we would like to use in imports
     // so webpack doesn't tries to import them
     externals: {
-      "@topcoder/micro-frontends-navbar-app":
-        "@topcoder/micro-frontends-navbar-app",
+      "@topcoder/mfe-header":
+        "@topcoder/mfe-header",
     },
     output: {
       path: path.resolve(__dirname, 'dist'),

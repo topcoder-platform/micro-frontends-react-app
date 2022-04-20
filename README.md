@@ -30,7 +30,7 @@ Inside the project folder run:
 
 - `npm i` - install dependencies
 - `npm run dev` - run app in development mode
-- As this app can be loaded only inside a frame single-spa, you have to run a `micro-frontends-frame` frame app and configure it to use the URL `http://localhost:8500/topcoder-micro-frontends-react-app.js`.
+- As this app can be loaded only inside a frame single-spa, you have to run a `mfe-core` frame app and configure it to use the URL `http://localhost:8500/topcoder-micro-frontends-react-app.js`.
 
 ## Deployment to Production
 

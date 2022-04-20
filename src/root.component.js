@@ -4,7 +4,7 @@ import {
   setAppMenu, 
   setNotificationPlatform, 
   PLATFORM, 
-} from "@topcoder/micro-frontends-navbar-app";
+} from "@topcoder/mfe-header";
 import appMenu from "./constants/appMenu";
 import AuthDemo from "./components/AuthDemo";
 import NoSidebarDemo from "./components/NoSidebarDemo";

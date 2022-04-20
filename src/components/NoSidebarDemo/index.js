@@ -7,7 +7,7 @@ import React, { useLayoutEffect } from "react";
 import {
   disableSidebarForRoute,
   enableSidebarForRoute,
-} from "@topcoder/micro-frontends-navbar-app";
+} from "@topcoder/mfe-header";
 
 const COMPONENT_ROUTE = "/micro-frontends-react-route/no-sidebar/*";
 
