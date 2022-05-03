@@ -1,6 +1,10 @@
 import React, { useEffect } from "react";
 import { Link, Router } from "@reach/router";
-import { setAppMenu } from "@topcoder/micro-frontends-navbar-app";
+import { 
+  setAppMenu, 
+  setNotificationPlatform, 
+  PLATFORM, 
+} from "@topcoder/mfe-header";
 import appMenu from "./constants/appMenu";
 import AuthDemo from "./components/AuthDemo";
 import NoSidebarDemo from "./components/NoSidebarDemo";
@@ -9,6 +13,7 @@ export default function Root() {
   useEffect(() => {
     // when app starts it should set its side menu structure
     setAppMenu("/micro-frontends-react-route", appMenu);
+    setNotificationPlatform(PLATFORM.CONNECT);
   }, []);
 
   return (

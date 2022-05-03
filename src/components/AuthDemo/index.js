@@ -5,7 +5,7 @@ import {
   logout,
   getAuthUserTokens,
   getAuthUserProfile,
-} from "@topcoder/micro-frontends-navbar-app";
+} from "@topcoder/mfe-header";
 
 const Profile = ({ authUserProfile }) => (
   <>
