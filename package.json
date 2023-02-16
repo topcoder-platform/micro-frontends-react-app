@@ -4,6 +4,7 @@
     "start": "node server.js",
     "dev": "webpack-dev-server --port 8500",
     "dev-https": "webpack-dev-server --https --port 8500",
+    "qa": "webpack-dev-server --port 8500",    
     "build": "webpack --mode=production",
     "analyze": "webpack --mode=production --env.analyze=true",
     "lint": "eslint src --ext js",
